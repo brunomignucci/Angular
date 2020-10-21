@@ -1,0 +1,23 @@
+import { NgIf, NgIfContext } from '@angular/common';
+import {Component, TemplateRef} from "@angular/core"
+
+@Component(
+
+    {
+        selector: "app-body",
+        templateUrl: "./body.component.html"
+        
+    }
+)
+export class BodyComponent
+{
+   
+    mostrar:boolean = true;
+    frase : any = 
+    {
+        mensaje: "Un gran poder requiere una gran responsabilidad.",
+        autor: "Ben Parker",
+        mensaje2: "Aguanten las milanesas."
+    };
+    personajes: string[]= ["Spiderman","Venom","Dr. Octopus"];
+}

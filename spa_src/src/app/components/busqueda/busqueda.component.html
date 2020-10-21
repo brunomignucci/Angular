@@ -1,0 +1,15 @@
+<h1>Heroes <small>Old School</small></h1>
+
+<div class="row">
+    <div class="col-md-12">
+    <div *ngIf="cantidad === 0" class="alert alert-info" role="alert">
+        No existen resultados con {{term}}
+    </div>
+    </div>
+</div>
+
+<div class="card-columns animated fadeIn">
+    <app-heroe-tarjeta (heroeSeleccionado)="verHeroe($event)" [heroe]="heroe" [ind]="heroe.idx" *ngFor="let heroe of heroes; let i = index;"></app-heroe-tarjeta>
+
+      
+</div>
