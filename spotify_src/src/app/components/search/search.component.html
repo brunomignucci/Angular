@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col">
+        <input type="text" (keyup)="buscar(valorcito.value)"class="form-control" placeholder="Buscar" #valorcito>
+        
+        
+    </div>
+    <div *ngIf="encontro===true" class="card-columns">
+        <div *ngFor="let dato of busqueda" class="card">
+          <img [src]=dato.flag class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title"><span class="badge badge-dark">{{dato.name}}</span></h5>
+            <p class="card-text"><span class="badge badge-dark">{{dato.population | number}}</span></p>
+            <li class="li-formas" *ngFor="let formas of dato.altSpellings">{{formas}}</li>
+            </div>
+        </div>
+    
+    </div>
+
+</div>

@@ -1,0 +1,20 @@
+<!--
+<ul>
+
+    <li *ngFor="let pais of datos">
+        {{pais.name}} - {{pais.population | number}}
+    </li>
+</ul>
+
+-->
+<div  class="card-columns">
+    <div *ngFor="let dato of datos" class="card">
+      <img [src]=dato.flag class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title"><span class="badge badge-dark">{{dato.name}}</span></h5>
+        <p class="card-text"><span class="badge badge-dark">{{dato.population | number}}</span></p>
+        <li class="li-formas" *ngFor="let formas of dato.altSpellings">{{formas}}</li>
+        </div>
+    </div>
+
+</div>
