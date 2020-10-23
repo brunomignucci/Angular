@@ -1,0 +1,24 @@
+<div [ngClass]="modo" role="alert">
+    <h4 class="alert-heading">Well done!</h4>
+    <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+    <hr>
+    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+</div>
+
+
+<button type="button" class="btn btn-info m-5" (click)="modo= 'alert-info'">INFO</button>
+<button type="button" class="btn btn-success m-5" (click)="modo= 'alert-success'">SUCCESS</button>
+
+<br><br>
+
+<h3 [ngClass]="{'text-danger': propiedades.danger }"> 
+    Hola Mundo
+</h3>
+
+<button (click)="propiedades.danger= !propiedades.danger"  class="btn btn-info m-5">TOGGLE</button>
+
+<br><br><br>
+
+<button class="btn btn-primary" type="button" name= "button">
+    <i class="fas fa-spinner fa-spin"></i>
+</button>
