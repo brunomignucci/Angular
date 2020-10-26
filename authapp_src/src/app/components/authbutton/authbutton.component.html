@@ -1,0 +1,11 @@
+<ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+    <p>Usuario Autenticado!</p>
+    <button class="btn-sm" (click)="auth.logout({ returnTo: document.location.origin })">
+      Salir
+    </button>
+</ng-container>
+
+<ng-template #loggedOut>
+    <p>Todavia no hay una sesion iniciada</p>
+    <button class="btn-sm"(click)="auth.loginWithRedirect()">Ingresar</button>
+</ng-template>
